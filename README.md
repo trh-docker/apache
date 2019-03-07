@@ -1,1 +1,1 @@
-# apache
+# apache & PHP7 
