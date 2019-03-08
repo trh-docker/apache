@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y apache2 &&\
 	rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 	
 ADD files/bash/entry.sh /opt/bin/
-ADD files/apache2 /etc/
+ADD files/apache2 /etc/apache2
 ENV APACHE_RUN_DIR=/var/run/apache2 \
 	APACHE_RUN_USER=www-data \
 	APACHE_RUN_GROUP=www-data \
