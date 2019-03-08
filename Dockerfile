@@ -145,11 +145,9 @@ RUN set -eux; \
 	# smoke test
 	httpd -v
 
-COPY httpd-foreground /opt/bin/
 ADD files/bash/entry.sh /opt/bin/
 
-RUN chmod +x /opt/bin/entry.sh &&\
-	chmod +x /opt/bin/httpd-foreground && ln -s /opt/bin/httpd-foreground /bin/httpd-foreground
+RUN chmod +x /opt/bin/entry.sh 
 EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
