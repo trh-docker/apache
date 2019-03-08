@@ -6,4 +6,4 @@
 rm -f /usr/local/apache2/logs/httpd.pid
 chmod +x /etc/apache2/envvars 
 sh /etc/apache2/envvars
-/usr/sbin/apache2
+/usr/sbin/apache2 -DFOREGROUND
