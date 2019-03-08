@@ -19,7 +19,7 @@ ENV APACHE_RUN_DIR=/var/run/apache2 \
 
 RUN chmod +x /opt/bin/entry.sh && chown -R www-data:www-data /opt/tlm/html && mkdir /var/run/apache2 &&\
 	# ln -s /etc/apache2/mods-enabled  /opt/tlm/html/mods-enabled &&\
-	# ln -s /etc/apache2/mods-enabled  /opt/tlm/html/mods-enabled &&\
+	ln -s /etc/apache2/ports.conf  /opt/tlm/html/ports.conf &&\
 	ln -s /etc/apache2/mods-enabled  /opt/tlm/html/mods-enabled 
 EXPOSE 80
 
