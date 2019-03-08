@@ -5,5 +5,5 @@
 # Apache gets grumpy about PID files pre-existing
 rm -f /usr/local/apache2/logs/httpd.pid
 chmod +x /etc/apache2/envvars 
-./etc/apache2/envvars
+sh /etc/apache2/envvars
 /usr/sbin/apache2
