@@ -3,7 +3,7 @@ FROM quay.io/spivegin/tlmbasedebian
 
 RUN apt-get update && apt-get install -y apache2 curl openssl gnupg wget gzip git &&\
 	apt-get autoclean && apt-get autoremove &&\
-	rm -rf /etc/apache2/ &&\
+	# rm -rf /etc/apache2/ &&\
 	rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 
