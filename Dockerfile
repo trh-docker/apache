@@ -23,6 +23,9 @@ RUN chmod +x /opt/bin/entry.sh && chown -R www-data:www-data /opt/tlm/html &&\
 
 ADD files/apache2 /etc/apache2
 ADD files/html/index.html /opt/tlm/html/
+
+ADD files/bash/entry.sh /opt/bin/
+RUN chmod +x /opt/bin/entry.sh
 EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
