@@ -22,6 +22,7 @@ RUN chmod +x /opt/bin/entry.sh && chown -R www-data:www-data /opt/tlm/html && mk
 	ln -s /opt/tlm/html /var/www/ 
 	# ln -s /etc/apache2/mods-enabled  /opt/tlm/html/mods-enabled &&\
 	# ln -s /etc/apache2/ports.conf  /opt/tlm/html/ports.conf &&\
+ADD files/html/index.html /opt/tlm/html/
 EXPOSE 80
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
