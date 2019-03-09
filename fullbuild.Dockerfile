@@ -34,7 +34,6 @@ RUN update-ca-certificates --verbose &&\
 RUN apt-get update && apt-get install -y \
 	php${PHP_VERSION} \
 	php${PHP_VERSION}.cgi \
-	php${PHP_VERSION}-opcache \
 	php${PHP_VERSION}-dom \
 	php${PHP_VERSION}-ctype \
 	php${PHP_VERSION}-curl \
@@ -53,7 +52,6 @@ RUN apt-get update && apt-get install -y \
 	php${PHP_VERSION}-iconv \
 	php${PHP_VERSION}-imagick \
 	php${PHP_VERSION}-xdebug \
-	libapache2-mod-php${PHP_VERSION} \
 	php-pear \
 	php${PHP_VERSION}-phar && \
 	apt-get autoclean && apt-get autoremove &&\

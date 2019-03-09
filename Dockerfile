@@ -1,7 +1,7 @@
 FROM quay.io/spivegin/php7
 
 
-RUN apt-get update && apt-get install -y apache2 &&\
+RUN apt-get update && apt-get install -y apache2 libapache2-mod-php7.0 &&\
 	apt-get autoclean && apt-get autoremove &&\
 	rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
