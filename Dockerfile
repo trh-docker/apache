@@ -17,7 +17,7 @@ ENV APACHE_RUN_DIR=/var/run/apache2 \
 	LANG=C \
 	APACHE_ULIMIT_MAX_FILES='ulimit -n 65536'
 
-RUN chmod +x /opt/bin/entry.sh && chown -R www-data:www-data /opt/tlm/html && mkdir /var/run/apache2  &&\
+RUN chmod +x /opt/bin/entry.sh && chown -R www-data:www-data /opt/tlm/html &&\
 	rm -rf /var/www/html &&\
 	ln -s /opt/tlm/html /var/www/ 
 	# ln -s /etc/apache2/mods-enabled  /opt/tlm/html/mods-enabled &&\
