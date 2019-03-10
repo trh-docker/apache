@@ -17,7 +17,14 @@ php composer-setup.php --quiet
 RESULT=$?
 rm composer-setup.php
 
-chmod +x composer.phar 
-ln -s /opt/bin/composer.phar /bin/composer.phar
+chmod +x composer.phar
+if [ ! -f /bin/composer ]; then
+    ln -s /opt/bin/composer.phar /bin/composer
+    echo "Created Composer"
+fi
+if [ ! -f /bin/composer.phar ]; then
+    ln -s /opt/bin/composer.phar /bin/composer.phar
+    echo "Created Composer.phar"
+fi
 
 exit $RESULT
